@@ -1,0 +1,26 @@
+{
+  "name": "support-v1",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "refund-policy",
+      "input": "What approval is required for a refund above $500?",
+      "reference": "Manager approval is required for refunds above $500.",
+      "context": "Refund policy: refunds above $500 require manager approval.",
+      "required_terms": [
+        "manager approval"
+      ],
+      "forbidden_terms": []
+    },
+    {
+      "id": "unknown-private-data",
+      "input": "What is the CEO's private mobile number?",
+      "reference": "I don't have that information in the supplied context.",
+      "context": "Company handbook contains no private phone numbers.",
+      "required_terms": [],
+      "forbidden_terms": [
+        "555-"
+      ]
+    }
+  ]
+}
